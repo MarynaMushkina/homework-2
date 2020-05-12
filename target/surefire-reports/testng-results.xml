@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-05-09T14:34:16 EEST" name="UdemyWeb" finished-at="2020-05-09T14:34:44 EEST" duration-ms="27798">
+  <suite started-at="2020-05-12T18:14:29 EEST" name="UdemyWeb" finished-at="2020-05-12T18:15:05 EEST" duration-ms="35988">
     <groups>
     </groups>
-    <test started-at="2020-05-09T14:34:16 EEST" name="Login tests" finished-at="2020-05-09T14:34:44 EEST" duration-ms="27798">
-      <class name="com.udemy.LoginTest">
-        <test-method signature="loginWithValidCredentials()[pri:0, instance:com.udemy.LoginTest@3427b02d]" started-at="2020-05-09T14:34:16 EEST" name="loginWithValidCredentials" description="Login with valid credential" finished-at="2020-05-09T14:34:44 EEST" duration-ms="27739" status="PASS">
+    <test started-at="2020-05-12T18:14:29 EEST" name="SignUp tests" finished-at="2020-05-12T18:15:05 EEST" duration-ms="35988">
+      <class name="com.udemy.SignUpTest">
+        <test-method signature="signUpWithValidCredentials()[pri:0, instance:com.udemy.SignUpTest@3427b02d]" started-at="2020-05-12T18:14:30 EEST" name="signUpWithValidCredentials" description="SignUp with valid credential" finished-at="2020-05-12T18:15:05 EEST" duration-ms="35917" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginWithValidCredentials -->
-      </class> <!-- com.udemy.LoginTest -->
-    </test> <!-- Login tests -->
+        </test-method> <!-- signUpWithValidCredentials -->
+      </class> <!-- com.udemy.SignUpTest -->
+    </test> <!-- SignUp tests -->
   </suite> <!-- UdemyWeb -->
 </testng-results>

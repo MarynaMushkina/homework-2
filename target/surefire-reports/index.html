@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-UdemyWeb">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-UdemyWeb" title="com.udemy.LoginTest" class="method navigator-link" hash-for-method="loginWithValidCredentials">loginWithValidCredentials</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-UdemyWeb" title="com.udemy.SignUpTest" class="method navigator-link" hash-for-method="signUpWithValidCredentials">signUpWithValidCredentials</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-UdemyWeb -->
@@ -120,16 +120,16 @@
           <div class="suite-UdemyWeb-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.udemy.LoginTest</span>
+              <span class="class-name">com.udemy.SignUpTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="loginWithValidCredentials">
-                  </a> <!-- loginWithValidCredentials -->
-                  <span class="method-name">loginWithValidCredentials</span>
+                  <a name="signUpWithValidCredentials">
+                  </a> <!-- signUpWithValidCredentials -->
+                  <span class="method-name">signUpWithValidCredentials</span>
                   <em>
-(Login with valid credential)                  </em>
+(SignUp with valid credential)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -144,15 +144,15 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;UdemyWeb&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Login tests&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;SignUp tests&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.udemy.LoginTest&quot;&gt;
+      &lt;class name=&quot;com.udemy.SignUpTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;loginWithValidCredentials&quot;/&gt;
+          &lt;include name=&quot;signUpWithValidCredentials&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.udemy.LoginTest --&gt;
+      &lt;/class&gt; &lt;!-- com.udemy.SignUpTest --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Login tests --&gt;
+  &lt;/test&gt; &lt;!-- SignUp tests --&gt;
 &lt;/suite&gt; &lt;!-- UdemyWeb --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -164,7 +164,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Login tests (1 class)</span>
+                <span class="test-name">SignUp tests (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -192,14 +192,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'loginWithValidCredentials')
-data.setCell(0, 2, 'com.udemy.LoginTest')
-data.setCell(0, 3, 27739);
+data.setCell(0, 1, 'signUpWithValidCredentials')
+data.setCell(0, 2, 'com.udemy.SignUpTest')
+data.setCell(0, 3, 35917);
 window.suiteTableData['UdemyWeb']= { tableData: data, tableDiv: 'times-div-UdemyWeb'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 27 seconds</span>
+              <span class="suite-total-time">Total running time: 35 seconds</span>
               <div id="times-div-UdemyWeb">
               </div> <!-- times-div-UdemyWeb -->
             </div> <!-- times-div -->
@@ -225,9 +225,9 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.udemy.LoginTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.udemy.SignUpTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">loginWithValidCredentials</span>
+                <span class="method-name">signUpWithValidCredentials</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->

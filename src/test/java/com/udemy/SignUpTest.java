@@ -11,10 +11,10 @@ import org.testng.annotations.Test;
 import java.io.File;
 
 
-public class LoginTest {
+public class SignUpTest {
 
-    @Test(description = "Login with valid credential")
-    public void loginWithValidCredentials() {
+    @Test(description = "SignUp with valid credential")
+    public void signUpWithValidCredentials() {
         File chromeDriver = new File("src/main/resources/chromedriver.exe");
         ChromeDriverService chromeService = new ChromeDriverService.Builder()
                 .usingDriverExecutable(chromeDriver)
