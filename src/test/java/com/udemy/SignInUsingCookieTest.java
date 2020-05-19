@@ -9,10 +9,10 @@ import org.testng.annotations.Test;
 
 import java.sql.Date;
 
-public class SignInTest extends TestBase {
+public class SignInUsingCookieTest extends TestBase {
 
     @Test(description = "SignIn with valid credential")
-    public void signIn() {
+    public void signInUsingCookie() {
         By userAvatarLocator = By.xpath("//div[@data-purpose='user-avatar']");
         String name = "Maryna";
         String target_url = "https://udemy.com/";

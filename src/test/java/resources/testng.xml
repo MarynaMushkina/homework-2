@@ -8,9 +8,9 @@
                     <include name="signUpWithValidCredentials"/>
                 </methods>
             </class>
-            <class name="com.udemy.SignInTest">
+            <class name="com.udemy.SignInUsingCookieTest">
                 <methods>
-                    <include name="signIn"/>
+                    <include name="signInUsingCookie"/>
                 </methods>
             </class>
         </classes>
