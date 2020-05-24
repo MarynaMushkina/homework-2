@@ -1,6 +1,7 @@
 package com.udemy;
 
 import com.udemy.pages.HomePage;
+import com.udemy.pages.SearchResultPage;
 import com.udemy.pages.SignupPopup;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,6 +18,8 @@ public class TestBase {
     WebDriverWait wait;
     HomePage homePage;
     SignupPopup signupPopup;
+    SearchResultPage searchResultPage;
+
 
     @BeforeMethod(description = "Open browser")
     public void openBrowser() {
@@ -27,9 +30,10 @@ public class TestBase {
                 .build();
 
         driver = new ChromeDriver(chromeService);
-        wait = new WebDriverWait(driver, 15);
+        wait = new WebDriverWait(driver, 25);
         homePage = new HomePage(driver, wait);
         signupPopup = new SignupPopup(driver, wait);
+        searchResultPage = new SearchResultPage(driver, wait);
     }
 
     @AfterMethod(description = "Close browser")

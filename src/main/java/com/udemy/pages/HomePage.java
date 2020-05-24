@@ -11,6 +11,8 @@ import java.sql.Date;
 
 public class HomePage {
     By userAvatarLocator = By.xpath("//div[@data-purpose='user-avatar']");
+    By searchFildHome = By.xpath(" //input[@id=\"search-field-home\"]");
+    By searchHomeButtonLocator = By.xpath("//button[@aria-label=\"Поиск\" and @ type=\"submit\"]");
     String target_url = "https://udemy.com/";
 
     private WebDriver driver;
@@ -44,4 +46,21 @@ public class HomePage {
         WebElement userAvatar = driver.findElement(userAvatarLocator);
         return userAvatar.getAttribute("aria-label");
     };
+
+    public HomePage setSearchWord() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(searchFildHome));
+        WebElement nameField = driver.findElement(searchFildHome);
+        nameField.clear();
+        nameField.sendKeys("Angular");
+        return this;
+    }
+
+    public HomePage clickSearchHomeButton() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(searchHomeButtonLocator));
+        WebElement searchHomeButton = driver.findElement(searchHomeButtonLocator);
+        wait.until(ExpectedConditions.elementToBeClickable(searchHomeButtonLocator));
+        searchHomeButton.click();
+        return this;
+    }
 }
+

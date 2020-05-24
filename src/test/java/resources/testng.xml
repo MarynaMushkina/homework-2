@@ -8,9 +8,14 @@
 <!--                    <include name="signUpWithValidCredentials"/>-->
 <!--                </methods>-->
 <!--            </class>-->
-            <class name="com.udemy.SignInUsingCookieTest">
+<!--            <class name="com.udemy.SignInUsingCookieTest">-->
+<!--                <methods>-->
+<!--                    <include name="signInUsingCookie"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+            <class name="com.udemy.SearchTest">
                 <methods>
-                    <include name="signInUsingCookie"/>
+                    <include name="testSearchField"/>
                 </methods>
             </class>
         </classes>
