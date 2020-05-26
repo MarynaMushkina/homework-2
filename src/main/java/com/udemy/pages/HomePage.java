@@ -4,15 +4,21 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 public class HomePage {
     By userAvatarLocator = By.xpath("//div[@data-purpose='user-avatar']");
     By searchFildHome = By.xpath(" //input[@id=\"search-field-home\"]");
     By searchHomeButtonLocator = By.xpath("//button[@aria-label=\"Поиск\" and @ type=\"submit\"]");
+    By MenuCategoriesLocator = By.xpath("//ul[@aria-label=\"Категории\"]/li/a/span[@class='fx']");
+    By CategoriesMenuDropDownLocator = By.xpath("//div[@class=\"dropdown--open-on-hover dropdown--topics dropdown--open-on-hover dropdown\"]");
+
     String target_url = "https://udemy.com/";
 
     private WebDriver driver;
@@ -62,5 +68,21 @@ public class HomePage {
         searchHomeButton.click();
         return this;
     }
-}
+    public List<String> getMenuCategoriesList() {
+        List<String> MenuList = new ArrayList<>();
 
+        Actions actions = new Actions(driver);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(CategoriesMenuDropDownLocator));
+        WebElement CategoriesMenuDropDown = driver.findElement(CategoriesMenuDropDownLocator);
+        actions.moveToElement(CategoriesMenuDropDown).perform();
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(MenuCategoriesLocator));
+        List<WebElement> MenuCategories = driver.findElements(MenuCategoriesLocator);
+
+        for(WebElement element:MenuCategories) {
+            MenuList.add(element.getText());
+        }
+
+        return MenuList;
+    }
+}
