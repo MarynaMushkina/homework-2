@@ -3,6 +3,8 @@ package com.udemy;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import static com.udemy.testdata.UserData.baseUser;
+
 public class SignInUsingCookieTest extends TestBase {
 
     @Test(description = "SignIn with valid credential")
@@ -10,6 +12,6 @@ public class SignInUsingCookieTest extends TestBase {
 
         homePage.open().setCookie().open();
 
-        Assert.assertEquals(homePage.getUserAvatarLabel(), "Maryna");
+        Assert.assertEquals(homePage.getUserAvatarName(), baseUser.getName());
     }
 }
