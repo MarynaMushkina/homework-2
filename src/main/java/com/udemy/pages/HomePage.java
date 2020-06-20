@@ -91,7 +91,7 @@ public class HomePage {
 
     public String getUserAvatarName () {
         try {
-            wait.until(ExpectedConditions.visibilityOfElementLocated(userAvatarLocator));
+            new WebDriverWait(driver, 3).until(ExpectedConditions.visibilityOfElementLocated(userAvatarLocator));
             if(userAvatar.getAttribute("aria-label") != null) return userAvatar.getAttribute("aria-label");
         }
         catch (TimeoutException e) {
