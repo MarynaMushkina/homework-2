@@ -32,7 +32,16 @@
         <classes>
             <class name="com.udemy.CategoriesTest">
                 <methods>
-                    <include name="TestMenuList"/>
+                    <include name="testMenuList"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="External links test">
+        <classes>
+            <class name="com.udemy.ExternalLinksTest">
+                <methods>
+                    <include name="externalLinks"/>
                 </methods>
             </class>
         </classes>
