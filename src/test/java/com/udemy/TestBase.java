@@ -42,6 +42,7 @@ public class TestBase {
         homePage = new HomePage(driver, wait);
         signupPopup = new SignupPopup(driver, wait);
         searchResultPage = new SearchResultPage(driver, wait);
+        driver.manage().window().maximize();
     }
 
     @AfterMethod(description = "Close browser")

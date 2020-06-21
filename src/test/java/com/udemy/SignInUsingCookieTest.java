@@ -10,7 +10,7 @@ public class SignInUsingCookieTest extends TestBase {
     @Test(description = "SignIn with valid credential")
     public void signInUsingCookie() {
 
-        homePage.open().setCookie().open();
+        homePage.open().setCookie(baseUser.getCookie()).open();
 
         Assert.assertEquals(homePage.getUserAvatarName(), baseUser.getName());
     }

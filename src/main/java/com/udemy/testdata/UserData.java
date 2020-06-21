@@ -7,7 +7,7 @@ import java.sql.Date;
 
 public interface UserData {
 
-    Cookie cookie = new Cookie.Builder("dj_session_id", "nr88yy50izsz72060frdq6yer9wd48f2")
+    Cookie cookie = new Cookie.Builder("dj_session_id", "0op2mpxwyc7att7uddbx3lh95yfyrc7i")
             .domain("www.udemy.com")
             .expiresOn(new Date(2020, 06, 16))
             .isHttpOnly(true)

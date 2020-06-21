@@ -12,7 +12,7 @@ public class SearchTest extends TestBase {
 
     @Test(description = "Check search field")
     public void testSearchField() throws MalformedURLException {
-        homePage.open().setSearchWord().clickSearchHomeButton();
+        homePage.open().setSearchWord(SEARCH_PHRASE).clickSearchHomeButton();
         Assert.assertTrue(searchResultPage.getSearchHeaderText().contains(SEARCH_PHRASE_RESULTS));
         Assert.assertFalse(searchResultPage.getSearchValue().isEmpty());
         Assert.assertEquals(searchResultPage.getUrlParamRefValue(), SEARCH_PHRASE);

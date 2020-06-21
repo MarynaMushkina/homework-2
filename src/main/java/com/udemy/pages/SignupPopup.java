@@ -32,51 +32,52 @@ public class SignupPopup {
     private WebElement signupPopup;
 
     By nameFieldLocator = By.id("id_fullname");
+    @FindBy(id = "id_fullname")
+    private WebElement nameField;
+
     By emailFieldLocator = By.xpath("//input[@data-purpose='email']");
+    @FindBy(xpath = "//input[@data-purpose='email']")
+    private WebElement emailField;
+
     By passwordFieldLocator = By.id("password");
-    By signUpButtonLocatorLocator = By.id("submit-id-submit");
+    @FindBy(id = "password")
+    private WebElement passwordField;
+
+    By signUpButtonLocator = By.id("submit-id-submit");
+    @FindBy(id = "submit-id-submit")
+    private WebElement signUpButton;
 
     public SignupPopup open() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(signupPopupLocator));
         signupPopup.click();
-
         return this;
     }
-    public SignupPopup setName() {
+
+    public SignupPopup setName(String name) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(nameFieldLocator));
-        WebElement nameField = driver.findElement(nameFieldLocator);
         nameField.clear();
-        nameField.sendKeys(baseUser.getName());
+        nameField.sendKeys(name);
         return this;
-
     }
 
-    public SignupPopup setEmail() {
+    public SignupPopup setEmail(String email) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(emailFieldLocator));
-        WebElement emailField = driver.findElement(emailFieldLocator);
         emailField.clear();
-        emailField.sendKeys(baseUser.getEmail());
+        emailField.sendKeys(email);
         return this;
-
     }
 
-    public SignupPopup setPassword() {
+    public SignupPopup setPassword(String pass) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(passwordFieldLocator));
-        WebElement passwordField = driver.findElement(passwordFieldLocator);
         passwordField.clear();
-        passwordField.sendKeys(baseUser.getPassword());
+        passwordField.sendKeys(pass);
         return this;
-
     }
 
     public SignupPopup clickSignUpButton() {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(signUpButtonLocatorLocator));
-        WebElement signUpButton = driver.findElement(signUpButtonLocatorLocator);
-        wait.until(ExpectedConditions.elementToBeClickable(signUpButtonLocatorLocator));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(signUpButtonLocator));
+        wait.until(ExpectedConditions.elementToBeClickable(signUpButtonLocator));
         signUpButton.click();
         return this;
-
     }
-
-
 }
